@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderService {
@@ -14,15 +15,14 @@ public class OrderService {
         return orderRepository.save(emp);
     }
 
-
-    /* search all employees*/
-
     public List<Customer> findAll() {
         return orderRepository.findAll();
     }
 
 
-    /*delete an employee*/
+    public Customer getOne(String empid) {
+        return orderRepository.getOne(empid) ;
+    }
 
     public void delete(Customer emp) {
         orderRepository.delete(emp);
