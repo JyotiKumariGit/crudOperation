@@ -20,8 +20,8 @@ public class OrderService {
     }
 
 
-    public Customer getOne(String empid) {
-        return orderRepository.getOne(empid) ;
+    public Customer getOne(String eid) {
+        return orderRepository.getOne(eid) ;
     }
 
     public void delete(Customer emp) {

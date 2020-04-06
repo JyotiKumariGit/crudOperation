@@ -16,10 +16,10 @@ public class Receipient implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @OneToOne(targetEntity = BasicProfile.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "Basic_Profile", referencedColumnName = "id")
+    @JoinColumn(name = "Basic_Profiles", referencedColumnName = "Id")
     private BasicProfile basicProfile;
     @OneToMany(targetEntity = Address.class,cascade = CascadeType.ALL)
-    @JoinColumn(name = "Address", referencedColumnName = "id")
+    @JoinColumn(name = "Addresses", referencedColumnName = "Id")
     private List<Address> addresses;
 }
 

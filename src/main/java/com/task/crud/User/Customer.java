@@ -12,9 +12,9 @@ public class Customer implements Serializable {
     @Id
     private String orderId;
     @OneToMany(targetEntity = Product.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "Product")
+    @JoinColumn(name = "Products")
     private List<Product> products;
     @OneToOne(targetEntity = Receipient.class, cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "id", name = "Receipient")
+    @JoinColumn(referencedColumnName = "Id", name = "Receipients")
     private Receipient receipient;
 }
